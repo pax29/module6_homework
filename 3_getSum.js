@@ -1,25 +1,12 @@
-let Number1;
-let Number2;
-let Number3;
 
-
-const getSumOfTwoNumbers = (externalFunc) => {
-    externalFunc();
-
-    return function() {
-        Number2 = 5;
-        console.log (`got Second Number: ${Number2}`);
-        Number3 = Number1+Number2;
-        console.log (`got Sum: ${Number3}`)
+const getSum = (someNumber) => {
+    console.log (`First Number:`, someNumber)
+    
+    return function (anotherNumber) {
+        console.log (`Second Number:`, anotherNumber);
+        console.log (`Sum:`, someNumber+anotherNumber)
     }
-
 }
 
-const getNumber1 = () => {
-    Number1 = 3;
-    console.log (`got First Number: ${Number1}`)
-}
-
-const resultFunc = getSumOfTwoNumbers(getNumber1);
-
-resultFunc ()
+const resultFunc = getSum(3);
+resultFunc(2)

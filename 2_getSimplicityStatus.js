@@ -28,5 +28,4 @@ const getSimplicityStatusUpTo1000 = () => {
     alert(`${userPrompt} это ${result} число`)
 }
 
-do getSimplicityStatusUpTo1000()
-while (userPrompt != "777")
+getSimplicityStatusUpTo1000()
